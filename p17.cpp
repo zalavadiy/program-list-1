@@ -1,30 +1,31 @@
-//220130318058
-//krisha zalavadiya
-#include <iostream>
+/*Write a C++ program to demonstrate use of Function Overloading.*/
+#include<iostream>
 using namespace std;
-
+void max(int a, int b)
+{
+    int Max;
+    Max=(a>b)?a:b;
+    cout<<"Maximum number is :: "<<Max<<endl;
+}
+void max(float a, float b)
+{
+    float Max;
+    Max=(a>b)?a:b;
+    cout<<"Maximum number is :: "<<Max<<endl;
+}
 int main()
 {
-     int n, num, digit, rev = 0;
-
-     cout << "Enter a positive number: ";
-     cin >> num;
-
-     n = num;
-
-     do
-     {
-         digit = num % 10;
-         rev = (rev * 10) + digit;
-         num = num / 10;
-     } while (num != 0);
-
-     cout << " The reverse of the number is: " << rev << endl;
-
-     if (n == rev)
-         cout << " The number is a palindrome.";
-     else
-         cout << " The number is not a palindrome.";
-
+    int num1,num2;
+    float n1,n2;
+    cout<<"Enter the first integer number :: ";
+    cin>>num1;
+    cout<<"Enter the second integer number :: ";
+    cin>>num2;
+    max(num1,num2);
+    cout<<"Enter the first float number :: ";
+    cin>>n1;
+    cout<<"Enter the second float number :: ";
+    cin>>n1;
+    max(n1,n2);
     return 0;
 }

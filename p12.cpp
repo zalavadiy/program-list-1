@@ -1,20 +1,14 @@
-//220130318058
-//krisha zalavadiya
-#include <iostream>
+/*Write a C++ program to demonstrate use of default arguments*/
+#include<iostream>
 using namespace std;
-
-int main() 
+void f(int a=0, int b=0)
 {
-
-    int n;
-
-    cout << "Enter a positive integer: ";
-    cin >> n;
-
-    for (int i = 1; i <= 10; i++)
-	 {
-        cout << n << " * " << i << " = " << n * i << endl;
-     }
-    
-    return 0;
+    cout<<"a = "<<a<<" , b = "<<b<<endl;
+}
+int main()
+{
+    f();
+    f(10);
+    f(10,0);
+    f(10,99);
 }

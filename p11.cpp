@@ -1,23 +1,17 @@
-//220130318058
-//krisha zalavadiya
+// Write a C++ program to demonstrate use of return by reference.
+
 #include<iostream>
 using namespace std;
-
+int x=5 //global variable
+int & test();
 int main()
 {
-	int a[3],i,max;
-	
-	for(i=0;i<3;i++)
-	{
-		cout<<"Enter the element ::"<<endl;
-		cin>>a[i];
-	}
-	max=a[0];
-	for(i=0;i<3;i++)
-	{
-		if(a[i]>max)
-			max=a[i];
-	}
-	cout<<"Maximum number is ::"<<max<<endl;
-	return 0;
+    cout<<x<<endl;
+    test()=15;
+    cout<<x<<endl;
+    return 0;
+}
+int &test ()
+{
+    return x;
 }

@@ -1,20 +1,23 @@
-//220130318058
-//krisha zalavadiya
-#include<iostream>
-#include<cmath>
+//Write a C++ program to demonstrate use of call by reference.
+#include <iostream>  
 using namespace std;
-
+void swap (int &, int &);
 int main()
 {
-	float p,t,r,si;
-	cout<<"Enter the Initial Principle:"<<endl;
-	cin>>p;
-	cout<<"Enter the Rate of Intrest :"<<endl;
-	cin>>r;
-	cout<<"Enter the Number of time interval:"<<endl;
-	cin>>t;
-	si=(p*r*t)/100;
-	cout<<"Simple Intrest is :"<<si;
-	
-	return 0;
+    int a,b;
+    cout<<"Enter the frist number :: ";
+    cin>>a;
+    cout<<"Enter the second number :: ";
+    cin>>b;
+    cout<<"Before swapping "<<a<<" & "<<b<<endl;
+    swap(a,b);
+    cout<<"After swapping "<<a<<" & "<<b;
+    return 0;
+}
+void swap (int & p,int & q)
+{
+    int temp;
+    temp=p;
+    p=q;
+    q=temp;
 }

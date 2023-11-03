@@ -1,32 +1,18 @@
-//220130318058
-//krisha zalavadiya
-#include <iostream>
+//.Write a C++ program to add two integer values using call by reference.
+#include <iostream>  
 using namespace std;
-
-int main() {
-    int n, t1 = 0, t2 = 1, nextTerm = 0;
-
-    cout << "Enter the number of terms: ";
-    cin >> n;
-
-    cout << "Fibonacci Series: ";
-
-    for (int i = 1; i <= n; ++i) {
-        // Prints the first two terms.
-        if(i == 1) {
-            cout << t1 << ", ";
-            continue;
-        }
-        if(i == 2) {
-            cout << t2 << ", ";
-            continue;
-        }
-        nextTerm = t1 + t2;
-        t1 = t2;
-        t2 = nextTerm;
-        
-        cout << nextTerm << ", ";
-    }
-    return 0;
+int add(int&,int&);
+int main ()
+{
+    int a,b;
+    cout<<"Enter the frist number :: ";
+    cin>>a;
+    cout<<"Enter the second number :: ";
+    cin>>b;
+    add(a,b);
+    cout<<"Two number add :: "<<add(a,b);
 }
-
+int add(int & p, int & q)
+{
+    return p+q;
+}

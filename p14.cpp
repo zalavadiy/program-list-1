@@ -1,18 +1,17 @@
-//220130318058
-//krisha zalavadiya
-#include <iostream>
+//.Write a C++ program to calculate cube of a given number using inline function.
+#include<iostream>
 using namespace std;
-
-int main() {
-  int n;
-
-  cout << "Enter an integer: ";
-  cin >> n;
-
-  if ( n % 2 == 0)
-    cout << n << " is even.";
-  else
-    cout << n << " is odd.";
-
-  return 0;
+inline int cub (int);
+int main()
+{
+    int a;
+    cout<<"Enter the number ::";
+    cin>>a;
+    cout<<"Cube is :: "<<cub(a);
+    cub(a);
+    return 0;
+}
+inline int cub (int a)
+{
+    return a*a*a;
 }

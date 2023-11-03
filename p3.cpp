@@ -1,15 +1,21 @@
-//220130318058
-//krisha zalavadiya
-#include<iostream>
+// 220130318038
+// Bhvay Bhuva
+// Write a C++ program to define a function outside the class using scope resolution operator
+#include <iostream>
 using namespace std;
 
+class A 
+{
+	public:	
+		void fun();
+};
 int main()
 {
-	int r;
-	cout<<"Enter the radius ::"<<endl;
-	cin>>r;
-	cout<<"The Diameter of circle is      ::"<<2*r<<endl;
-	cout<<"The Circumference of circle is ::"<<2*3.14*r<<endl;
-	cout<<"The Area of circle is          ::"<<3.14*r*r<<endl;
+	A a;
+	a.fun();
 	return 0;
+}
+void A::fun() 
+{ 
+	cout << "Hello welcome"; 
 }

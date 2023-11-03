@@ -1,25 +1,13 @@
-//220130318058
-//krisha zalavadiya
-#include <iostream>
+//.Write a C++ program to demonstrate use of constant argument
+#include<iostream>
 using namespace std;
-
+int test (const int);
 int main()
 {
-    int a,b,temp;
-
-    cout<<"Enter the value of a ::"<<endl;
-    cin>>a;
-    cout<<"Enter the value of b ::"<<endl;
-    cin>>b;
-
-    temp=a;
-    a=b;
-    b=temp;
-
-    cout<<"After swapping"<<endl;
-    cout<<"The value of a ::"<<a<<endl;
-    cout<<"The value of b ::"<<b<<endl;
-    
+    cout<<test(5);
     return 0;
 }
-
+int test (const int z)
+{
+    return z;
+}

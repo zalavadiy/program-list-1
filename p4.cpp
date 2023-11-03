@@ -1,21 +1,14 @@
-//220130318058
-//krisha zalavadiya
-#include<iostream>
-using namespace std;
-
-int main()
+// 220130318038
+// Bhvay Bhuva
+//. Write a C++ program for endl and setw function.
+#include <iostream>     
+#include <iomanip>
+using namespace std;  
+int main () 
 {
-	int a[5],i;
-	
-	for(i=0;i<5;i++)
-	{
-		cout<<"Enter any number :: "<<endl;
-		cin>>a[i];
-	}
-	for(i=0;i<5;i++)
-	{
-		if(a[i]<0)
-		cout<<"Negative Number = "<<a[i]<<endl;
-	}
-	return 0;
+    int roll;
+    cout<<"Enter the roll number :: ";  
+    cin>>roll;
+    cout<<"Your Roll number is :: "<<setw(4)<<roll;  
+    return 0;  
 }
